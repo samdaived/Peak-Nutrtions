@@ -33,18 +33,20 @@ export const ProductSection = () => {
           <div className="glass-card rounded-3xl shadow-card overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Product Image */}
-              <div className="relative bg-gradient-to-br from-accent to-muted p-8 md:p-12 flex items-center justify-center min-h-[400px]">
-                <div className="absolute inset-0 opacity-10">
+              {/* <div className="relative bg-gradient-to-br from-accent to-muted p-8 md:p-12 flex items-center justify-center min-h-[400px]"> */}
+              {/* <div className="absolute inset-0 opacity-10">
                   <div className="absolute top-10 left-10 w-20 h-20 border-2 border-primary rounded-full" />
                   <div className="absolute bottom-10 right-10 w-32 h-32 border-2 border-secondary rounded-full" />
-                </div>
-
+                  <div className="absolute bottom-10 right-10 w-32 h-32 border-2 border-secondary rounded-full" />
+                </div> */}
+              <div className="rounded-3xl overflow-hidden">
                 <img
                   src={productImage}
                   alt="Neovit Calcium + D3"
-                  className="w-full max-w-xs rounded-2xl animate-float drop-shadow-2xl"
+                  className="w-full animate-shake drop-shadow-2xl"
                 />
               </div>
+              {/* </div> */}
 
               {/* Product Details */}
               <div className="p-8 md:p-12 flex flex-col justify-center">
