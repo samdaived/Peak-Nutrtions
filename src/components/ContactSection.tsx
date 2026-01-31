@@ -1,5 +1,5 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, MapPin, Globe } from 'lucide-react';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Globe, Mail, MapPin } from "lucide-react";
 
 export const ContactSection = () => {
   const { t } = useLanguage();
@@ -8,8 +8,8 @@ export const ContactSection = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: t.contact.email,
-      value: 'service@peaknutritions.com',
-      href: 'mailto:service@peaknutritions.com',
+      value: "service@peaknutritions.com",
+      href: "mailto:service@peaknutritions.com",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -20,8 +20,8 @@ export const ContactSection = () => {
     {
       icon: <Globe className="w-6 h-6" />,
       label: t.contact.website,
-      value: 'www.peaknutritions.com',
-      href: 'https://www.peaknutritions.com',
+      value: "www.eugetsolutions.com",
+      href: "https://www.eugetsolutions.com",
     },
   ];
 
@@ -47,18 +47,26 @@ export const ContactSection = () => {
                 <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mx-auto mb-4 text-primary-foreground shadow-soft">
                   {info.icon}
                 </div>
-                <p className="text-sm font-medium text-muted-foreground mb-2">{info.label}</p>
+                <p className="text-sm font-medium text-muted-foreground mb-2">
+                  {info.label}
+                </p>
                 {info.href ? (
                   <a
                     href={info.href}
                     className="text-foreground font-semibold hover:text-primary transition-colors break-all"
-                    target={info.href.startsWith('http') ? '_blank' : undefined}
-                    rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    target={info.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      info.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                   >
                     {info.value}
                   </a>
                 ) : (
-                  <p className="text-foreground font-semibold break-all">{info.value}</p>
+                  <p className="text-foreground font-semibold break-all">
+                    {info.value}
+                  </p>
                 )}
               </div>
             ))}
