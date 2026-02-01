@@ -1,18 +1,19 @@
-import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { LanguageSwitcher } from './LanguageSwitcher';
-import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import PNLogo from "@/assets/PN.png";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const Header = () => {
   const { t, direction } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: t.nav.home, href: '#home' },
-    { label: t.nav.products, href: '#products' },
-    { label: t.nav.about, href: '#about' },
-    { label: t.nav.contact, href: '#contact' },
+    { label: t.nav.home, href: "#home" },
+    { label: t.nav.products, href: "#products" },
+    { label: t.nav.about, href: "#about" },
+    { label: t.nav.contact, href: "#contact" },
   ];
 
   return (
@@ -21,11 +22,15 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center shadow-soft">
-              <span className="text-primary-foreground font-bold text-lg">PN</span>
-            </div>
+            <img
+              src={PNLogo}
+              className="w-16 rotate-90"
+              alt="Neovit Calcium + D3"
+            />
             <div className="hidden sm:block">
-              <p className="font-semibold text-foreground leading-tight">Peak Nutrition</p>
+              <p className="font-semibold text-foreground leading-tight">
+                Peak Nutrition
+              </p>
               <p className="text-xs text-muted-foreground">Health & Wellness</p>
             </div>
           </a>
@@ -60,8 +65,8 @@ export const Header = () => {
         {/* Mobile Menu */}
         <div
           className={cn(
-            'md:hidden overflow-hidden transition-all duration-300',
-            isMenuOpen ? 'max-h-64 pb-4' : 'max-h-0'
+            "md:hidden overflow-hidden transition-all duration-300",
+            isMenuOpen ? "max-h-64 pb-4" : "max-h-0",
           )}
         >
           <nav className="flex flex-col gap-2">
