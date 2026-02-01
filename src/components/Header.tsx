@@ -21,12 +21,12 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
-            <img
-              src={PNLogo}
-              className="w-16 rotate-90"
-              alt="Neovit Calcium + D3"
-            />
+               <a href="#home" className="flex items-center gap-2">
+                 <img
+                   src={PNLogo}
+                   alt="Neovit Calcium + D3"
+                   className="max-w-[4rem] rotate-0 md:rotate-90 object-contain"
+                 />
             <div className="hidden sm:block">
               <p className="font-semibold text-foreground leading-tight">
                 Peak Nutrition
